@@ -2,7 +2,7 @@
     <main>
         <div class="container">
             <div class="card-wrapper" v-for='(element, index) in coverList' :key="index">
-                <Cover/>
+                <Cover  :cover= element />
             </div>
         </div>
         
@@ -31,7 +31,7 @@ export default {
     getCoverApi(){
         axios.get('https://flynn.boolean.careers/exercises/api/array/music')
         .then((result) => {
-        console.log(result.data.response)
+        console.log(result.data.response[0].author)
         this.coverList = result.data.response;
         })
     }
