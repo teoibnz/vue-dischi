@@ -16,7 +16,8 @@ export default {
   components: {
     Header,
     CoverList
-  }
+  },
+  
 }
 </script>
 
